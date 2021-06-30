@@ -41,9 +41,9 @@ namespace winPass11_guided_install
                     Console.WriteLine("Exit");
                     break;
                 case 3:
-                    if (File.Exists("C:\\$WINDOWS.~BT\\Sources\\appraiser.dll"))
+                    if (File.Exists("C:\\$WINDOWS.~BT\\Sources\\AppraiserRes.dll"))
                     { // clean up old setup
-                        File.Delete("C:\\$WINDOWS.~BT\\Sources\\appraiser.dll");
+                        File.Delete("C:\\$WINDOWS.~BT\\Sources\\AppraiserRes.dll");
                     } else
                     {
                         MessageBox.Show("Hey! You pressed the button to early, it seems as if the installer hasn't downloaded the file we need to replace yet... Try again after reading the directions");
@@ -51,7 +51,7 @@ namespace winPass11_guided_install
                     try
                     {
                         WebClient downloader = new WebClient();
-                        downloader.DownloadFile("https://github.com/CodeProf14/Fix-TPM/blob/main/Fix%20TPM/appraiserres.dll?raw=true", "C:\\$WINDOWS.~BT\\Sources\\appraiser.dll");
+                        downloader.DownloadFile("https://github.com/CodeProf14/Fix-TPM/blob/main/Fix%20TPM/appraiserres.dll?raw=true", "C:\\$WINDOWS.~BT\\Sources\\AppraiserRes.dll");
                     } catch
                     {
                         MessageBox.Show("Failed to download file :(");
